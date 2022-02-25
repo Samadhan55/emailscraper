@@ -19,10 +19,6 @@ with open('websiteData.txt') as data:
 					else:
 						email_hash[email]['EmailType'] = "Non-Human"
 
-print(email_hash)
 email_json = json.dumps(email_hash)
 with open('result.json','w') as fil:
 	fil.write(email_json)
-
-print(email_json)
-
