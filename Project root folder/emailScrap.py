@@ -4,8 +4,8 @@ import json
 count=0
 with open('websiteData.txt') as data:
 	email_hash={}
-	for lines in data:#current file is line based file
-		lst = re.findall('[a-zA-Z0-9_.!#$%&*+-=?^~]*@[a-zA-Z0-9_]+\.[a-zA-z]{3}\.?[a-za-z]{0,2}',lines)#returns list
+	for lines in data:#current file is line based file with lazy loading
+		lst = re.findall('[a-zA-Z0-9_.!#$%&*+-=?^~]*@[a-zA-Z0-9_]+\.[a-zA-z.]+',lines)#returns list
 		#lst1 =re.findall('^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$',lines)
 		if lst:
 			for email in lst:
