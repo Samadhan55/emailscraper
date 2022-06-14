@@ -6,7 +6,7 @@ with open('websiteData.txt') as data:
 	email_hash={}
 	for lines in data:#current file is line based file with lazy loading
 		lst = re.findall('[a-zA-Z0-9_.!#$%&*+-=?^~]*@[a-zA-Z0-9_]+\.[a-zA-z.]+',lines)#returns list
-		#lst1 =re.findall('^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$',lines)
+		#lst1 =re.findall('^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$',lines) [a-zA-Z0-9_.!#$%&*+-=?^~]*@[a-zA-Z0-9_]+\.[a-zA-z.]{3}\.\w{2}
 		if lst:
 			for email in lst:
 				if email_hash.get(email):
